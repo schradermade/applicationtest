@@ -1,0 +1,21 @@
+{
+  "manifestVersion":  1,
+  "deployments": {
+    "aspNetCoreWeb": [
+      {
+        "name": "BizLookupApi",
+        "parameters": {
+          "appBundle": "publishapi.zip",
+          "iisPath": "/api"
+        }
+      },
+	  {
+        "name": "BizLookupMvc",
+        "parameters": {
+          "appBundle": "publishmvc.zip",
+          "iisPath": "/"
+        }
+      }
+    ]
+  }
+}

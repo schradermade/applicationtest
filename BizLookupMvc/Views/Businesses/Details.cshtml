@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Industry</th>
+                <th>Hours</th>
+                <th>Address</th>
+                <th>Website</th>
+                <th>Phone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>@Model.BusinessId</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Industry</td>
+                    <td>@Model.Hours</td>
+                    <td>@Model.Address</td>
+                    <td><a href="@Model.URL"><p>@Model.URL</p></a></td>
+                    <td><a href="tel:@Model.Phone"><p>@Model.Phone</p></a></td>
+                </tr>
+        </tbody>
+    </table>
+
+<a class="btn btn-warning" href="/Businesses/Edit/@(Model.BusinessId)"><p>Edit @Model.Name</p></a>
+<hr />
+<a class="btn btn-success" href="/Businesses"><p>Return To Businesses</p></a>
+
+
+
+@* <h1>Business Info:</h1>
+<ul>
+    <li>ID: @Model.BusinessId</li>
+    <li>Name: @Model.Name</li>
+    <li>Species: @Model.Industry</li>
+    <li>Age: @Model.Address</li>
+    <li>Gender: @Model.Hours</li>
+</ul>
+<br>
+
+<a href="/Businesses/Edit/@(Model.BusinessId)"><p>Edit</p></a>
+<br>
+
+<a href="/Businesses"><p>Return</p></a>
+
+<a href="/Businesses/Delete/@(Model.BusinessId)"><p>Remove Business</p></a> *@
+@* <button class="btn btn-success" type="submit">Submit Edits</button> *@
